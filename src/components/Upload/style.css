@@ -1,0 +1,64 @@
+.Upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: left;
+  overflow: hidden;
+}
+
+.Content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.Files {
+  margin-left: 32px;
+  align-items: flex-start;
+  justify-items: flex-start;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.Actions {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: flex-end;
+  flex-direction: column;
+  }
+
+.Title {
+  margin-bottom: 32px;
+  color: #555;
+}
+
+button {
+  font-family: 'Roboto medium', sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  height: 36px;
+  min-width: 88px;
+  padding: 6px 16px;
+  text-align: center;
+  white-space: nowrap;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  border-radius: .25rem;
+  background: rgba(103, 58, 183, 1);
+  color: #fff;
+  outline: 0;
+}
+
+button:disabled {
+  background: rgb(189, 189, 189);
+  cursor: default;
+}
