@@ -41,7 +41,6 @@ class Filedrop extends Component {
   }
 
   onDrop(event) {
-    console.log("onDrop", event)
     event.preventDefault()
 
     if (this.props.disabled) return

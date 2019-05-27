@@ -10,7 +10,6 @@ class Products extends Component {
       search:'',
       products: []
     }
-    console.log(this.props)
   }
 
   componentDidMount() {
@@ -22,7 +21,6 @@ class Products extends Component {
     console.log("get")
     return axios.get('http://rlaapi-env.pnqpme3byb.us-east-2.elasticbeanstalk.com/api/products')
       .then(res => {
-        console.log("res", res)
         this.setState({
           ...this.state,
           search: "",
@@ -41,7 +39,6 @@ class Products extends Component {
   render() {
 
     const { products } = this.state
-    console.log("HIHI", products)
     let filterProducts = this.state.products.filter(product => {
       return product.part_number.toLowerCase().includes(this.state.search.toLowerCase()) ||
         product.description.toLowerCase().includes(this.state.search.toLowerCase()) ||
