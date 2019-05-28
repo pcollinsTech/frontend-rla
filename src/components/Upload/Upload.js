@@ -47,7 +47,7 @@ class Upload extends Component {
       const formData = new FormData();
       formData.append("file", file, file.name);
 
-      req.open("POST", "http://rlaapi-env.pnqpme3byb.us-east-2.elasticbeanstalk.com/api/import");
+      req.open("POST", "https://pcollins.website/api/import");
       req.send(formData);
     });
   }

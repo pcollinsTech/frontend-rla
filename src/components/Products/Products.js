@@ -13,13 +13,11 @@ class Products extends Component {
   }
 
   componentDidMount() {
-    console.log("hi")
     return this.getProducts()
   }
 
   getProducts() {
-    console.log("get")
-    return axios.get('http://rlaapi-env.pnqpme3byb.us-east-2.elasticbeanstalk.com/api/products')
+    return axios.get('https://pcollins.website/api/products')
       .then(res => {
         this.setState({
           ...this.state,
@@ -38,14 +36,12 @@ class Products extends Component {
 
   render() {
 
-    const { products } = this.state
     let filterProducts = this.state.products.filter(product => {
       return product.part_number.toLowerCase().includes(this.state.search.toLowerCase()) ||
         product.description.toLowerCase().includes(this.state.search.toLowerCase()) ||
         product.category.name.toLowerCase().includes(this.state.search.toLowerCase()) ||
         product.sub_category.name.toLowerCase().includes(this.state.search.toLowerCase())
     })
-    
     return (
       <div className="container">
         <form className="form-inline mt-5">
